@@ -3,17 +3,17 @@
     <title>Google Translation</title>
 </head>
 <body>
-    <div id="google_translate_element" style="display: none"></div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <div id="google_translate_element" style="display: none;"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
         }
 
         function translateLanguage(lang) {
-           console.log(lang);
-           googleTranslateElementInit();
+            googleTranslateElementInit();
             var $frame = $('.goog-te-menu-frame:first');
-            console.log($frame);
             if (!$frame.size()) {
                 alert("Error: Could not find Google translate frame.");
                 return false;
@@ -23,40 +23,39 @@
         }
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    
-    <select id="newdemo" onchange="translateLanguage(this.value);">
-        <option>
+
+    <select id="selectCountry" onchange="translateLanguage(this.value);">
+        <option value="German">
             <a href="javascript:;" val="German">
                 <span>German</span>
                 <img src="img/flags/germany_flag.jpg" alt="" />
             </a>
         </option>
-        <option>
+        <option value="Italian">
             <a href="javascript:;" val="Italian">
                 <span>Italian</span>
                 <img src="img/flags/italy_flag.jpg" alt="" />
             </a>
         </option>
-        <option>
+        <option value="Hindi">
             <a href="javascript:;" val="Hindi">
                 <span>Hindi</span>
                 <img src="img/flags/india_flag.png" alt="" />
             </a>
         </option>
-        <option>
+        <option value="French">
             <a href="javascript:;" val="French">
                 <span>French</span>
                 <img src="img/flags/french_flag.jpg" alt="" />
             </a>
         </option>
-        <option>
+        <option value="Spanish">
             <a href="javascript:;" val="Spanish">
                 <span>Spanish</span>
                 <img src="img/flags/spain_flag.jpg" alt="" />
             </a>
         </option>
-        <option>
+        <option value="Japanese">
             <a href="javascript:;" val="Japanese">
                 <span>Japanese</span>
                 <img src="images/japan.jpg" alt="" />
