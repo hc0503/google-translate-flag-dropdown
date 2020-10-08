@@ -33,46 +33,7 @@
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-    <select id="selectCountry" onchange="translateLanguage(this.value);">
-        <option value="German">
-            <a href="javascript:;" val="German">
-                <span>German</span>
-                <img src="img/flags/germany_flag.jpg" alt="" />
-            </a>
-        </option>
-        <option value="Italian">
-            <a href="javascript:;" val="Italian">
-                <span>Italian</span>
-                <img src="img/flags/italy_flag.jpg" alt="" />
-            </a>
-        </option>
-        <option value="Hindi">
-            <a href="javascript:;" val="Hindi">
-                <span>Hindi</span>
-                <img src="img/flags/india_flag.png" alt="" />
-            </a>
-        </option>
-        <option value="French">
-            <a href="javascript:;" val="French">
-                <span>French</span>
-                <img src="img/flags/french_flag.jpg" alt="" />
-            </a>
-        </option>
-        <option value="Spanish">
-            <a href="javascript:;" val="Spanish">
-                <span>Spanish</span>
-                <img src="img/flags/spain_flag.jpg" alt="" />
-            </a>
-        </option>
-        <option value="Japanese">
-            <a href="javascript:;" val="Japanese">
-                <span>Japanese</span>
-                <img src="images/japan.jpg" alt="" />
-            </a>
-        </option>
-    </select>
-
-    <select class="selectpicker" data-width="fit">
+    <select class="selectpicker" data-width="fit" onchange="translateLanguage(this.value);">
         <option data-content='<span class="flag-icon flag-icon-af"></span> Afrikaans' value="Afrikaans">Afrikaans</option>
         <option  data-content='<span class="flag-icon flag-icon-al"></span> Albanian' value="Albanian">Albanian</option>
         <option  data-content='<span class="flag-icon flag-icon-ar"></span> Arabic' value="Arabic">Arabic</option>
@@ -114,7 +75,7 @@
         <option  data-content='<span class="flag-icon flag-icon-km"></span> Khmer' value="Khmer">Khmer</option>
         <option  data-content='<span class="flag-icon flag-icon-rw"></span> Kinyarwanda' value="Kinyarwanda">Kinyarwanda</option>
         <option  data-content='<span class="flag-icon flag-icon-kr"></span> Korean' value="Korean">Korean</option>
-        <option  data-content='<span class="flag-icon flag-icon-ir"></span> Kurdish' value="Kurdish">Kurdish</option>
+        <option  data-content='<span class="flag-icon flag-icon-ir"></span> Kurdish' value="Kurdish (Kurmanji)">Kurdish</option>
         <option  data-content='<span class="flag-icon flag-icon-ky"></span> Kyrgyz' value="Kyrgyz">Kyrgyz</option>
         <option  data-content='<span class="flag-icon flag-icon-la"></span> Lao' value="Lao">Lao</option>
         <option  data-content='<span class="flag-icon flag-icon-lv"></span> Latvian' value="Latvian">Latvian</option>
@@ -171,7 +132,6 @@
         translate the web page.
     </div>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
