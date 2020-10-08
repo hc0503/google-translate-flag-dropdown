@@ -4,6 +4,27 @@
 </head>
 <body>
     <div id="google_translate_element" style="display: none"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+        }
+
+        function translateLanguage(lang) {
+           console.log(lang);
+           googleTranslateElementInit();
+            var $frame = $('.goog-te-menu-frame:first');
+            console.log($frame);
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
     <select id="newdemo" onchange="translateLanguage(this.value);">
         <option>
             <a href="javascript:;" val="German">
@@ -49,26 +70,5 @@
         list is than we can hide the google translator widget and use all the language to
         translate the web page.
     </div>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-        }
-
-        function translateLanguage(lang) {
-           console.log(lang);
-           googleTranslateElementInit();
-            var $frame = $('.goog-te-menu-frame:first');
-            console.log($frame);
-            if (!$frame.size()) {
-                alert("Error: Could not find Google translate frame.");
-                return false;
-            }
-            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-            return false;
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </body>
 </html>
